@@ -19,7 +19,7 @@ namespace MauiApp9
             builder.Services.AddDbContext<MobileDbContext>(options =>
             {
                 options
-                    .UseSqlite(Path.Combine(FileSystem.Current.CacheDirectory, $"LocalDatabase-{AppInfo.Current.BuildString}.db"));
+                    .UseSqlite("Filename=" + Path.Combine(FileSystem.Current.CacheDirectory, $"LocalDatabase-{AppInfo.Current.BuildString}.db"));
             });
 
 #if DEBUG
